@@ -1,6 +1,7 @@
 package i_introduction._7_Nullable_Types
 
-import util.*
+import util.TODO
+import util.doc5
 
 fun test() {
     val s: String = "this variable cannot store null references"
@@ -24,7 +25,9 @@ fun todoTask5(client: Client?, message: String?, mailer: Mailer): Nothing = TODO
 fun sendMessageToClient(
         client: Client?, message: String?, mailer: Mailer
 ) {
-    todoTask5(client, message, mailer)
+    val email = client?.personalInfo?.email;
+    if (email == null || message == null) return;
+    mailer.sendMessage(email, message)
 }
 
 class Client (val personalInfo: PersonalInfo?)
