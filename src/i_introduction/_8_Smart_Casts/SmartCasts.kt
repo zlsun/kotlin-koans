@@ -13,11 +13,11 @@ fun eval(e: Expr): Int =
             else -> throw IllegalArgumentException("Unknown expression")
         }
 
-fun todoTask6(expr: Expr): Nothing = TODO(
+fun todoTask8(expr: Expr): Nothing = TODO(
     """
-        Task 6.
-        Rewrite 'JavaCode6.eval()' in Kotlin using smart casts and 'when' expression.
+        Task 8.
+        Rewrite 'JavaCode8.eval()' in Kotlin using smart casts and 'when' expression.
     """,
-    documentation = doc6(),
-    references = { JavaCode6().eval(expr) })
+    documentation = doc8(),
+    references = { JavaCode8().eval(expr) })
 

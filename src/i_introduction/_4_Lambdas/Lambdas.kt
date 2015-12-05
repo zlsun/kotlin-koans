@@ -10,18 +10,15 @@ fun example() {
     sum(1, square(2)) == 5
 }
 
-fun todoTask3(collection: Collection<Int>): Nothing = TODO(
+fun todoTask4(collection: Collection<Int>): Nothing = TODO(
     """
-        Task 3.
-        Rewrite 'JavaCode3.task3()' in Kotlin using lambdas.
+        Task 4.
+        Rewrite 'JavaCode4.task4()' in Kotlin using lambdas.
         You can find the appropriate function to call on 'collection' through IntelliJ's code completion feature.
         (Don't use the class 'Iterables').
     """,
-    documentation = doc3(),
-    references = { JavaCode3().task3(collection) })
+    documentation = doc4(),
+    references = { JavaCode4().task4(collection) })
 
-fun task3(collection: Collection<Int>): Boolean = collection.any { it % 42 == 0 }
-
-
-
+fun task4(collection: Collection<Int>): Boolean = collection.any { it % 42 == 0 }
 
