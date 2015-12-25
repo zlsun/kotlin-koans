@@ -5,3 +5,7 @@ My [resolutions](https://github.com/zlsun/kotlin-koans/tree/my-resolutions/src) 
 
 Use `git diff my-resolutions upstream/resolutions src` to check answers.
 
+## Licence
+
+[MIT Licence](http://opensource.org/licenses/MIT)
+
