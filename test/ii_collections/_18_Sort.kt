@@ -1,11 +1,12 @@
 package ii_collections
 
-import junit.framework.Assert
+import ii_collections.data.shop
+import ii_collections.data.sortedCustomers
+import org.junit.Assert.assertEquals
 import org.junit.Test
-import ii_collections.data.*
 
 class _18_Sort {
     @Test fun testGetCustomersSortedByNumberOfOrders() {
-        Assert.assertEquals(sortedCustomers, shop.getCustomersSortedByNumberOfOrders())
+        assertEquals(sortedCustomers, shop.getCustomersSortedByNumberOfOrders())
     }
 }

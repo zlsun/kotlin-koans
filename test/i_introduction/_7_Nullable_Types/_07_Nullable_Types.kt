@@ -1,7 +1,7 @@
 package i_introduction._7_Nullable_Types
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-import junit.framework.Assert
 
 class _07_Nullable_Types {
     fun testSendMessageToClient(
@@ -12,15 +12,15 @@ class _07_Nullable_Types {
     ) {
         var invoked = false
         sendMessageToClient(client, message, object : Mailer {
-            public override fun sendMessage(actualEmail: String, actualMessage: String) {
+            override fun sendMessage(actualEmail: String, actualMessage: String) {
                 invoked = true
-                Assert.assertEquals("The message is not as expected:",
+                assertEquals("The message is not as expected:",
                         message, actualMessage)
-                Assert.assertEquals("The email is not as expected:",
+                assertEquals("The email is not as expected:",
                         email, actualEmail)
             }
         })
-        Assert.assertEquals("The function 'sendMessage' should${if (shouldBeInvoked) "" else "n't"} be invoked",
+        assertEquals("The function 'sendMessage' should${if (shouldBeInvoked) "" else "n't"} be invoked",
                 shouldBeInvoked, invoked)
     }
 

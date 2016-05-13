@@ -1,9 +1,9 @@
 package iv_properties
 
-import kotlin.properties.ReadWriteProperty
-import util.TODO
-import java.util.Calendar
 import iii_conventions.MyDate
+import util.TODO
+import java.util.*
+import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
 fun todoTask35(): Nothing = TODO(
@@ -23,7 +23,7 @@ class D {
     var date by EffectiveDate()
     // The property date$delegate of type EffectiveDate is created;
     // the generated 'get' and 'set' accessors for 'date' are delegated to it.
-    // Browse the Kotlin tool window in IntelliJ for details.
+    // Browse the Kotlin tool window in IntelliJ IDEA for details.
 }
 
 class EffectiveDate<R> : ReadWriteProperty<R, MyDate> {

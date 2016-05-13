@@ -1,8 +1,8 @@
 package v_builders
 
-import junit.framework.Assert
+import org.junit.Assert.assertEquals
 import org.junit.Test
-import java.util.HashMap
+import java.util.*
 
 class _37_String_And_Map_Builders {
     @Test fun testBuildMap() {
@@ -11,6 +11,6 @@ class _37_String_And_Map_Builders {
         for (i in 0..10) {
             expected[i] = "$i"
         }
-        Assert.assertEquals("Map should be filled with the right values", expected, map)
+        assertEquals("Map should be filled with the right values", expected, map)
     }
 }

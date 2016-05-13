@@ -1,9 +1,11 @@
 package ii_collections
 
-import junit.framework.Assert
-import org.junit.Test
 import ii_collections.data.*
-import ii_collections.shopBuilders.*
+import ii_collections.shopBuilders.customer
+import ii_collections.shopBuilders.order
+import ii_collections.shopBuilders.shop
+import org.junit.Assert.assertEquals
+import org.junit.Test
 
 
 class _22_Fold {
@@ -18,6 +20,6 @@ class _22_Fold {
                 order(youTrack)
             }
         }
-        Assert.assertEquals(setOf(idea), testShop.getSetOfProductsOrderedByEveryCustomer())
+        assertEquals(setOf(idea), testShop.getSetOfProductsOrderedByEveryCustomer())
     }
 }

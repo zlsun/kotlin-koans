@@ -1,11 +1,12 @@
 package ii_collections
 
-import junit.framework.Assert
+import ii_collections.data.customers
+import ii_collections.data.shop
+import org.junit.Assert.assertEquals
 import org.junit.Test
-import ii_collections.data.*
 
 class _13_Introduction {
     @Test fun testSetOfCustomers() {
-        Assert.assertEquals(shop.getSetOfCustomers(), customers.values.toSet())
+        assertEquals(customers.values.toSet(), shop.getSetOfCustomers())
     }
 }

@@ -1,14 +1,14 @@
 package ii_collections
 
-import junit.framework.Assert
-import org.junit.Test
 import ii_collections.data.*
 import ii_collections.shopBuilders.customer
 import ii_collections.shopBuilders.order
+import org.junit.Assert.assertEquals
+import org.junit.Test
 
 class _23_Compound_Tasks {
     @Test fun testGetCustomersWhoOrderedProduct() {
-        Assert.assertEquals(setOf(customers[reka], customers[asuka]), shop.getCustomersWhoOrderedProduct(idea))
+        assertEquals(setOf(customers[reka], customers[asuka]), shop.getCustomersWhoOrderedProduct(idea))
     }
 
     @Test fun testMostExpensiveDeliveredProduct() {
@@ -18,10 +18,20 @@ class _23_Compound_Tasks {
                 order(reSharper)
             }
         }
-        Assert.assertEquals(reSharper, testShop.customers[0].getMostExpensiveDeliveredProduct())
+        assertEquals(reSharper, testShop.customers[0].getMostExpensiveDeliveredProduct())
     }
 
     @Test fun testNumberOfTimesEachProductWasOrdered() {
-        Assert.assertEquals(3, shop.getNumberOfTimesProductWasOrdered(reSharper))
+        assertEquals(4, shop.getNumberOfTimesProductWasOrdered(idea))
+    }
+
+    @Test fun testNumberOfTimesEachProductWasOrderedForRepeatedProduct() {
+        assertEquals("A customer may order a product for several times",
+                3, shop.getNumberOfTimesProductWasOrdered(reSharper))
+    }
+
+    @Test fun testNumberOfTimesEachProductWasOrderedForRepeatedInOrderProduct() {
+        assertEquals("An order may contain a particular product more than once",
+                3, shop.getNumberOfTimesProductWasOrdered(phpStorm))
     }
 }

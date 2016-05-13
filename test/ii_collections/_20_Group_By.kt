@@ -1,11 +1,12 @@
 package ii_collections
 
-import junit.framework.Assert
+import ii_collections.data.groupedByCities
+import ii_collections.data.shop
+import org.junit.Assert.assertEquals
 import org.junit.Test
-import ii_collections.data.*
 
 class _20_Group_By {
     @Test fun testGroupCustomersByCity() {
-        Assert.assertEquals(groupedByCities, shop.groupCustomersByCity())
+        assertEquals(groupedByCities, shop.groupCustomersByCity())
     }
 }
